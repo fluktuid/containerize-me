@@ -18,13 +18,13 @@ func HelloServer(w http.ResponseWriter, r *http.Request) {
 	log.Printf("Got request from %s", GetIP(r))
 	time.Sleep(time.Duration(getDelay()) * time.Millisecond)
 
-	fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
-	fmt.Fprintf(w, "Hopefully I'm containerized.")
+	fmt.Fprintf(w, "Hello, %s!\n", r.URL.Path[1:])
+	fmt.Fprintf(w, "Hopefully I'm containerized.\n")
 	hostname, err := os.Hostname()
 	if err != nil {
-		fmt.Fprint(w, "I may not get my hostname.")
+		fmt.Fprint(w, "I may not get my hostname.\n")
 	} else {
-		fmt.Fprintf(w, "Hostname: %s", hostname)
+		fmt.Fprintf(w, "Hostname: %s\n", hostname)
 	}
 }
 
