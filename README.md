@@ -13,7 +13,7 @@ Get this code in a container while using
 - scratch container
 
 Bonus:
-- Implement container a healthcheck
+- Implement healthcheck on container-level
 
 ### Second stage
 
